@@ -27,13 +27,24 @@ int sumOfProperFactors(int n){
 
 }
 
+bool isPerfectNumber(int n){
+    if(sumOfProperFactors(n) == n){
+        return true;
 
+    }
+    return false;
+}
 int main(){
 
     int userNum = 0;
     cout << "Enter a number you wanna check: ";
     cin >> userNum;
-    cout << "Sum of proper factors: " << sumOfProperFactors(userNum);
+    cout << "Sum of proper factors: " << sumOfProperFactors(userNum) << endl;;
+    if(isPerfectNumber(userNum)){
+        cout << "Amazing! It's Perfect!";
+    }else{
+        cout << "I'm Sorry, that's not a perfect number.";
+    }
 
     return 0;
     
